@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout android:id="@+id/passengers_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grey_color"
+    tools:context="com.movista.app.presentation.searchparams.passengersinfo.PassengersInfoActivity">
+
+    <Button
+        android:id="@+id/choose_comfort_type"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        style="@style/PassengersComfortTypeButton"
+        android:background="@android:color/white"
+        android:gravity="start|center_vertical"
+        android:paddingStart="16dp"
+        android:text="@string/comfort_type_economy"
+        android:drawableEnd="@drawable/arrow_expand"
+        android:paddingEnd="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/passengers_adult_area"
+        android:layout_width="match_parent"
+        android:layout_height="68dp"
+        android:layout_marginTop="8dp"
+        android:background="@android:color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/choose_comfort_type">
+
+
+        <TextView
+            android:id="@+id/passengers_adult_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/PassengersLabelMain"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/passengers_adult_label"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/passengers_adult_hint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/PassengersLabelHint"
+            android:layout_marginTop="4dp"
+            android:text="@string/passengers_adult_hint"
+            app:layout_constraintStart_toStartOf="@id/passengers_adult_label"
+            app:layout_constraintTop_toBottomOf="@id/passengers_adult_label" />
+
+        <include
+            android:id="@+id/passengers_choose_adult_count"
+            layout="@layout/item_choose_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintBottom_toBottomOf="@+id/passengers_adult_label"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/passengers_adult_label" />
+    </android.support.constraint.ConstraintLayout>
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/passengers_children_area"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@android:color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/passengers_adult_area">
+
+        <TextView
+            android:id="@+id/passengers_children_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/PassengersLabelMain"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/passengers_children_label"
+            app:layout_constraintStart_toStartOf="@id/passengers_children_area"
+            app:layout_constraintTop_toTopOf="@id/passengers_children_area" />
+
+        <TextView
+            android:id="@+id/passengers_children_hint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/PassengersLabelHint"
+            android:layout_marginTop="4dp"
+            android:text="@string/passengers_children_hint"
+            app:layout_constraintStart_toStartOf="@id/passengers_children_label"
+            app:layout_constraintTop_toBottomOf="@id/passengers_children_label" />
+
+        <include
+            android:id="@+id/passengers_choose_children_count"
+            layout="@layout/item_choose_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintBottom_toBottomOf="@+id/passengers_children_label"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/passengers_children_label" />
+
+        <com.google.android.flexbox.FlexboxLayout
+            android:id="@+id/children_info_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="16dp"
+            android:paddingBottom="16dp"
+            app:flexWrap="wrap"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/passengers_children_label"
+            app:layout_constraintTop_toBottomOf="@id/passengers_children_hint">
+
+
+        </com.google.android.flexbox.FlexboxLayout>
+
+
+    </android.support.constraint.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/passengers_warning"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/PassengersLabelHint"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:text="@string/passengers_warning"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/passengers_children_area" />
+
+    <TextView
+        android:id="@+id/passengers_more_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/PassengersLabelHint"
+        android:textColor="@color/colorAccent"
+        android:layout_marginTop="8dp"
+        android:text="@string/passengers_more_info"
+        android:background="@android:color/transparent"
+        app:layout_constraintStart_toStartOf="@id/passengers_warning"
+        app:layout_constraintTop_toBottomOf="@id/passengers_warning" />
+
+    <Button
+        android:id="@+id/passengers_done_button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/size_medium"
+        android:layout_marginEnd="@dimen/size_medium"
+        android:layout_marginStart="@dimen/size_medium"
+        android:text="@string/button_common_ready"
+        style="@style/MainButton"
+        android:foreground="?selectableItemBackground"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <com.movista.app.presentation.view.common.FadingSnackbar
+        android:id="@+id/snackbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@id/passengers_done_button" />
+
+</android.support.constraint.ConstraintLayout>

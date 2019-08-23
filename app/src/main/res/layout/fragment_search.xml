@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?><!-- Use DrawerLayout as root container for activity -->
+<android.support.constraint.ConstraintLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:animateLayoutChanges="true"
+    android:background="@color/colorPrimaryDark"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:stateListAnimator="@null">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@color/colorPrimaryDark">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/logo" />
+        </android.support.v7.widget.Toolbar>
+    </android.support.design.widget.AppBarLayout>
+
+    <FrameLayout
+        android:id="@+id/map_container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:foreground="@drawable/gradient_overlay"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/app_bar"
+        app:layout_constraintBottom_toTopOf="@id/from_label" />
+
+    <View
+        android:id="@+id/map_overlay"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:visibility="gone"
+        android:background="@color/colorPrimaryDark"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/from_label" />
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/banner_search_params_error"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/app_bar"
+        android:visibility="gone"
+        tools:visibility="visible">
+
+        <TextView
+            android:id="@+id/banner_search_params_error_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:text="Выберите город прибытия"
+            android:textColor="@android:color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/banner_search_params_error_dismiss"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:background="@android:color/transparent"
+            android:foreground="?selectableItemBackground"
+            android:minHeight="40dp"
+            android:minWidth="40dp"
+            android:text="OK"
+            android:textColor="@color/colorAccent"
+            app:layout_constraintBottom_toBottomOf="@+id/banner_search_params_error_text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#1B2646"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+    </android.support.constraint.ConstraintLayout>
+
+
+    <TextView
+        android:id="@+id/from_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/size_medium"
+        android:text="@string/fg_search_from_title"
+        style="@style/TextStyleSearch1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/to_label" />
+
+    <TextView
+        android:id="@+id/from_text"
+        style="@style/TextStyleSearch2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:hint="@string/fg_search_choose_city"
+        app:layout_constraintBaseline_toBaselineOf="@+id/from_label"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/from_label" />
+
+    <TextView
+        android:id="@+id/to_label"
+        style="@style/TextStyleSearch1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/size_medium"
+        android:text="@string/fg_search_to_title"
+        app:layout_constraintStart_toStartOf="@+id/from_label"
+        app:layout_constraintBottom_toTopOf="@id/date_label" />
+
+    <TextView
+        android:id="@+id/to_text"
+        style="@style/TextStyleSearch2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:hint="@string/fg_search_choose_city"
+        app:layout_constraintBaseline_toBaselineOf="@+id/to_label"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/to_label" />
+
+    <TextView
+        android:id="@+id/date_label"
+        style="@style/TextStyleSearch3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/size_medium"
+        android:text="@string/fg_search_there_title"
+        android:textAllCaps="true"
+        app:layout_constraintBottom_toTopOf="@+id/there_text"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/there_text"
+        style="@style/TextStyleSearch4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/size_medium"
+        android:layout_marginStart="16dp"
+        app:layout_constraintBottom_toTopOf="@id/passengers_value"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:text="15 июля" />
+
+    <TextView
+        android:id="@+id/passengers_value"
+        style="@style/TextStyleSearch3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAllCaps="true"
+        android:layout_marginStart="@dimen/size_medium"
+        android:text="@string/fg_search_passengers_title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/passengers_text" />
+
+    <!--пока хардкод-->
+    <TextView
+        android:id="@+id/passengers_text"
+        style="@style/TextStyleSearch4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/size_large"
+        android:layout_marginStart="16dp"
+        android:text="1 взрослый, эконом"
+        app:layout_constraintBottom_toTopOf="@id/switch_train"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:text="1 взрослый, эконом" />
+
+    <android.support.v7.widget.SwitchCompat
+        android:id="@+id/switch_train"
+        style="@style/SwitchTrain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/size_small"
+        android:layout_marginStart="@dimen/size_medium"
+        android:layout_marginBottom="@dimen/size_large"
+        android:checked="true"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/find_button" />
+
+    <android.support.v7.widget.SwitchCompat
+        android:id="@+id/switch_plain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/SwitchPlain"
+        android:checked="true"
+        android:layout_marginStart="@dimen/size_small"
+        app:layout_constraintBottom_toBottomOf="@+id/switch_train"
+        app:layout_constraintStart_toEndOf="@+id/switch_train" />
+
+    <android.support.v7.widget.SwitchCompat
+        android:id="@+id/switch_bus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/size_small"
+        style="@style/SwitchBus"
+        android:checked="true"
+        app:layout_constraintBottom_toBottomOf="@+id/switch_train"
+        app:layout_constraintStart_toEndOf="@+id/switch_plain" />
+
+    <Button
+        android:id="@+id/find_button"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:layout_marginEnd="@dimen/size_medium"
+        android:layout_marginStart="@dimen/size_medium"
+        android:layout_marginBottom="@dimen/size_medium"
+        android:text="@string/fg_search_find_button"
+        style="@style/MainButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+
+</android.support.constraint.ConstraintLayout>

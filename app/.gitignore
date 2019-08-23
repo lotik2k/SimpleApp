@@ -1,0 +1,7 @@
+security
+
+bin
+gen
+build
+local.properties
+*.iml

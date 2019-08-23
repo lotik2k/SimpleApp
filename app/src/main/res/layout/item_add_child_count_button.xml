@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Button xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/Base.Widget.AppCompat.Button.Borderless"
+    android:layout_width="wrap_content"
+    android:layout_height="32dp"
+    android:background="@drawable/next_button"
+    android:foreground="?selectableItemBackground"
+    android:drawableEnd="@drawable/increase_count"
+    android:drawablePadding="4dp"
+    android:fontFamily="@font/roboto_medium"
+    android:paddingEnd="8dp"
+    android:paddingStart="16dp"
+    android:text="Укажите возраст"
+    android:textAllCaps="false"
+    android:textColor="@android:color/white"
+    android:textSize="13sp" />

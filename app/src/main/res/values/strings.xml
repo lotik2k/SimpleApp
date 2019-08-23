@@ -1,0 +1,93 @@
+<resources>
+    <string name="app_name">Movista</string>
+    <string name="maps_api_key">AIzaSyC-n0bGk27A0QogzR-gxtH28aDR3gtLjRA</string>
+
+    <string name="error_no_connection">Ошибка, нет интернет-соединения</string>
+    <string name="error_common">Ошибка сервера</string>
+
+    <string name="button_common_ready">Готово</string>
+
+    <string name="departure_time">туда %1$s</string>
+    <string name="arrival_time">обратно %1$s</string>
+    <string name="price_text">%1$s ₽</string>
+    <string name="total_time">время в пути %1$s</string>
+
+    <string name="popular_places">Популярные места</string>
+    <string name="recent_places">Недавние места</string>
+
+    <string name="fg_search_from_title">Из</string>
+    <string name="fg_search_choose_city">Выберите город</string>
+    <string name="fg_search_to_title">в</string>
+    <string name="fg_search_there_title">туда</string>
+    <string name="fg_search_there_and_return_title">туда и обратно</string>
+    <string name="fg_search_passengers_title">пассажиры</string>
+    <string name="fg_search_find_button">найти билеты</string>
+    <string name="fg_search_date_full">%1$s - %2$s</string>
+    <string name="error_search_params_no_to_city">Выберите город прибытия</string>
+    <string name="error_search_params_no_from_to_city">Выберите город отправления и город прибытия</string>
+
+    <string name="choose_departure_place">Укажите город отправления</string>
+    <string name="choose_arrival_place">Укажите город прибытия</string>
+    <string name="my_destination">Мое местоположение</string>
+
+    <string name="date_select_from">Туда -</string>
+    <string name="date_select_to">Обратно</string>
+    <string name="date_select_no_return_needed">Обратно не нужно</string>
+    <string name="date_select_from_code">%1$s -</string>
+
+    <string name="place_search_recent_header">Недавно искали</string>
+    <string name="place_search_popular_header">Популярные направления</string>
+
+    <string name="title_passengers_info">Пассажиры</string>
+
+    <plurals name="passengers_info_adults">
+        <item quantity="zero">без взрослых</item>
+        <item quantity="one">%1$d взрослый</item>
+        <item quantity="two">%1$d взрослых</item>
+        <item quantity="few">%1$d взрослых</item>
+        <item quantity="many">%1$d взрослых</item>
+        <item quantity="other">%1$d взрослых</item>
+    </plurals>
+
+    <plurals name="passengers_info_children">
+        <item quantity="zero">без детей</item>
+        <item quantity="one">%1$d ребенок</item>
+        <item quantity="two">%1$d ребенка</item>
+        <item quantity="few">%1$d ребенка</item>
+        <item quantity="many">%1$d детей</item>
+        <item quantity="other">%1$d детей</item>
+    </plurals>
+
+    <string name="comfort_type_economy">Эконом</string>
+    <string name="comfort_type_premium_economy">Премиум эконом</string>
+    <string name="comfort_type_business">Бизнес</string>
+    <string name="comfort_type_first_class">Первый класс</string>
+
+    <string name="passengers_adult_label">Взрослые</string>
+    <string name="passengers_adult_hint">От 17 лет</string>
+    <string name="passengers_children_label">Дети</string>
+    <string name="passengers_children_hint">До 17 лет</string>
+    <string name="passengers_warning">Не более 4х пассажиров\nВозраст считается на момент начала поездки</string>
+    <string name="passengers_more_info">Подробнее о возрастных категориях</string>
+
+    <plurals name="passengers_child_age">
+        <item quantity="zero">До года</item>
+        <item quantity="one">%1$d год</item>
+        <item quantity="two">%1$d года</item>
+        <item quantity="few">%1$d года</item>
+        <item quantity="many">%1$d лет</item>
+        <item quantity="other">%1$d лет</item>
+    </plurals>
+    <string name="passenger_child_age_zero">До года</string>
+    <string name="passengers_with_seat">с местом</string>
+    <string name="passengers_without_seat">без места</string>
+    <string name="error_passengers_no_child_age">Укажите возраст ребенка</string>
+    <string name="child_info_edited">%1$s, %2$s</string>
+    <string name="passengers_age_categories_train_info"><b>Поезд</b>\n\nВзрослый от 10 лет — полный тариф.\n\nРебенок до 5 лет — без места, бесплатно.\n\nРебенок до 6 лет — без места, бесплатно применятеся только для направлений в Финляндию.\n\nРебенок от 5 до 10 лет — детский тариф.</string>
+    <string name="passengers_age_categories_plain_info"><b>Самолет</b>\n\nМладенец от 0 до 2 — тариф для младенцев, без места.\n\nРебенок от 2 до 12 лет — применяется тариф с учётом скидок.\n\nВзрослый от 12 лет — полный тарифа.</string>
+    <string name="passengers_age_categories_bus_info"><b>Самолет</b>\n\nМладенец от 0 до 2 — тариф для младенцев, без места.\n\nРебенок от 2 до 12 лет — применяется тариф с учётом скидок.\n\nВзрослый от 12 лет — полный тарифа.</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+</resources>

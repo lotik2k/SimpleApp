@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:state_checked="true" android:color="@android:color/white" />
+
+    <item android:state_pressed="true" android:color="@android:color/white" />
+
+    <item android:state_enabled="false" android:color="#906D7BA3" />
+
+    <!--<item android:color="#F50C142A" />-->
+    <item android:color="@color/date_select_days_color" />
+</selector>

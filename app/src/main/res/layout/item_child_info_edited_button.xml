@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Button xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/Base.Widget.AppCompat.Button.Borderless"
+    android:layout_width="wrap_content"
+    android:layout_height="32dp"
+    android:background="@drawable/passengers_child_with_info_button"
+    android:foreground="?selectableItemBackground"
+    android:drawableEnd="@drawable/passengers_child_info_edited_info"
+    android:drawablePadding="8dp"
+    android:fontFamily="@font/roboto_medium"
+    android:paddingEnd="8dp"
+    android:paddingStart="16dp"
+    tools:text="возраст"
+    android:textAllCaps="false"
+    android:textColor="@color/text_color_black"
+    android:textSize="13sp" />

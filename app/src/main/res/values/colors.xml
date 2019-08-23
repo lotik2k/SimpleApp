@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#243158</color>
+    <color name="colorPrimaryDark">#243158</color>
+    <color name="colorAccent">#2DCEB9</color>
+    <color name="color_accent_pressed">#602DCEB9</color>
+    <color name="hint">#6D7BA3</color>
+    <color name="hint_pressed">#606D7BA3</color>
+    <color name="switch_red">#FF2756</color>
+    <color name="switch_blue">#807EF5</color>
+    <color name="switch_green">#88BF42</color>
+    <color name="switch_off">#6D7BA3</color>
+    <color name="button_next_text">#DEFFFFFF</color>
+    <color name="grey_color">#F1F1F4</color>
+    <color name="text_color_black">#F500030A</color>
+    <color name="text_color_white">#F5FFFFFF</color>
+    <color name="text_color_grey">#666D7BA3</color>
+    <color name="hint_common">#F56D7BA3</color>
+    <color name="search_text_accent_color">#F52DCEB9</color>
+    <color name="place_search_button_clicked">#E6E6ED</color>
+    <color name="divider">#E6E6ED</color>
+    <color name="map_line_color">#33FFFFFF</color>
+    <color name="date_select_days_color">#0C142A</color>
+    <color name="date_select_button_text_color">#DE2DCEB9</color>
+    <color name="white_selected">#60ffffff</color>
+    <color name="grey_selected">#80F1F1F4</color>
+    <color name="snackbar_black">#00030A</color>
+    <color name="blue">#2B385F</color>
+</resources>

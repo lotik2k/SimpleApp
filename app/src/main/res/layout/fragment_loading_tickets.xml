@@ -1,0 +1,89 @@
+<android.support.constraint.ConstraintLayout android:id="@+id/loading_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark"
+    tools:context="com.movista.app.presentation.searchresult.loading.LoadingTicketsFragment">
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:layout_marginStart="16dp"
+        android:fontFamily="@font/roboto_bold"
+        android:text="Факт #326"
+        android:textColor="@color/text_color_white"
+        android:textSize="28sp"
+        app:layout_constraintBottom_toTopOf="@+id/textView7"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:fontFamily="@font/roboto_medium"
+        android:text="В 1925 году мошенник Виктор Люстиг умудрился дважды «продать» Эйфелеву башню на металлолом."
+        android:textColor="@color/text_color_white"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toTopOf="@+id/second_dot"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <View
+        android:id="@+id/first_dot"
+        android:layout_width="8dp"
+        android:layout_height="8dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/loading_dot"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <View
+        android:id="@+id/second_dot"
+        android:layout_width="8dp"
+        android:layout_height="8dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginStart="8dp"
+        android:background="@drawable/loading_dot"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/first_dot" />
+
+    <View
+        android:id="@+id/third_dot"
+        android:layout_width="8dp"
+        android:layout_height="8dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginStart="8dp"
+        android:background="@drawable/loading_dot"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/second_dot" />
+
+    <View
+        android:id="@+id/fourth_dot"
+        android:layout_width="8dp"
+        android:layout_height="8dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginStart="8dp"
+        android:background="@drawable/loading_dot"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/third_dot" />
+
+    <View
+        android:id="@+id/fifth_dot"
+        android:layout_width="8dp"
+        android:layout_height="8dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginStart="8dp"
+        android:background="@drawable/loading_dot"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/fourth_dot" />
+
+
+</android.support.constraint.ConstraintLayout>
